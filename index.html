@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CS Portfolio</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- HTMX - loaded from CDN -->
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Your Name</h1>
+            <ul>
+                <!-- HTMX attributes explained:
+                     hx-get: makes a GET request to the URL
+                     hx-target: where to put the response
+                     hx-swap: how to insert the content (innerHTML is default)
+                -->
+                <li><button hx-get="partials/about.html" hx-target="#main-content">About</button></li>
+                <li><button hx-get="partials/projects.html" hx-target="#main-content">Projects</button></li>
+                <li><button hx-get="partials/skills.html" hx-target="#main-content">Skills</button></li>
+                <li><button hx-get="partials/contact.html" hx-target="#main-content">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Default content shown on page load -->
+        <section class="hero">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I'm a Computer Science student/graduate passionate about building great software.</p>
+            <button hx-get="partials/about.html" hx-target="#main-content" class="cta-button">
+                Learn More About Me
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. Built with HTMX.</p>
+    </footer>
+</body>
+</html>

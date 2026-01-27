@@ -1,0 +1,44 @@
+<section class="projects">
+    <h2>My Projects</h2>
+
+    <div class="project-grid">
+        <!-- Each project card can load more details with HTMX -->
+        <div class="project-card">
+            <h3>Project One</h3>
+            <p>Brief description of your project and what it does.</p>
+            <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/yourusername/project" target="_blank">GitHub</a>
+            </div>
+            <!-- HTMX: Load project details on click -->
+            <button hx-get="partials/project-detail-1.html"
+                    hx-target="#project-details"
+                    hx-swap="innerHTML">
+                View Details
+            </button>
+        </div>
+
+        <div class="project-card">
+            <h3>Project Two</h3>
+            <p>Another awesome project description.</p>
+            <div class="project-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTMX</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/yourusername/project2" target="_blank">GitHub</a>
+            </div>
+            <button hx-get="partials/project-detail-2.html"
+                    hx-target="#project-details"
+                    hx-swap="innerHTML">
+                View Details
+            </button>
+        </div>
+    </div>
+
+    <!-- Project details load here -->
+    <div id="project-details"></div>
+</section>
