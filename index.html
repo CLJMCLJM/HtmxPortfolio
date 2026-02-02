@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CS Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="static/css/style.css">
     <!-- HTMX - loaded from CDN -->
     <script src="https://unpkg.com/htmx.org@2.0.4"></script>
@@ -27,15 +27,7 @@
         </nav>
     </header>
 
-    <main id="main-content">
-        <!-- Default content shown on page load -->
-        <section class="hero">
-            <h2>Welcome to My Portfolio</h2>
-            <p>I'm a Computer Science student/graduate passionate about building great software.</p>
-            <button hx-get="partials/about.html" hx-target="#main-content" class="cta-button">
-                Learn More About Me
-            </button>
-        </section>
+    <main id="main-content" hx-get="partials/home.html" hx-trigger="load" hx-swap="innerHTML">
     </main>
 
     <footer>
