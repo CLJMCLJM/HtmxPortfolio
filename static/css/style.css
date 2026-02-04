@@ -242,6 +242,48 @@ section li {
     font-size: 0.95rem;
 }
 
+/* Certificates section */
+.cert-category {
+    margin-bottom: 2rem;
+}
+
+.cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.cert-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.cert-icon {
+    width: 100px;
+    height: 100px;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cert-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.cert-name {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: center;
+    max-width: 120px;
+}
+
 /* Contact section */
 .contact-links {
     display: flex;
@@ -333,6 +375,10 @@ footer {
 
     .hero h2 {
         font-size: 2rem;
+    }
+
+    .cert-grid {
+        justify-content: center;
     }
 
     main {
